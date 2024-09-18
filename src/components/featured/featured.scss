@@ -1,0 +1,178 @@
+.featured {
+    flex: 2;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Center the featured component */
+
+    @media (max-width: 768px) {
+        width: 100%; /* Ensure it takes up full width */
+        padding: 10px; /* Add some padding for mobile */
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: gray;
+
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: 14px; /* Reduce title size for smaller screens */
+            }
+        }
+    }
+
+    .bottom {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%; /* Make sure it takes full width on small screens */
+
+        @media (max-width: 768px) {
+            padding: 15px; /* Reduce padding for smaller screens */
+            gap: 10px; /* Reduce gap between elements on smaller screens */
+        }
+
+        .featuredChart {
+            width: 100px;
+            height: 100px;
+
+            @media (max-width: 768px) {
+                width: 80px; /* Reduce chart size for smaller screens */
+                height: 80px;
+            }
+
+            @media (max-width: 480px) {
+                width: 60px; /* Further reduce chart size for very small screens */
+                height: 60px;
+            }
+        }
+
+        .title {
+            font-weight: 500;
+            color: gray;
+            font-size: 14px;
+
+            @media (max-width: 768px) {
+                font-size: 12px; /* Reduce title size for smaller screens */
+            }
+        }
+
+        .amount {
+            font-size: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 24px; /* Reduce amount size for smaller screens */
+            }
+
+            @media (max-width: 480px) {
+                font-size: 20px; /* Further reduce amount size for very small screens */
+            }
+        }
+
+        .desc {
+            font-weight: 300;
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: 11px; /* Reduce description size for smaller screens */
+            }
+        }
+
+        .summary {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around; /* Ensure even spacing between items */
+            gap: 20px; /* Add some spacing between sections */
+
+            @media (max-width: 768px) {
+                flex-direction: column; /* Stack summary items vertically on smaller screens */
+                gap: 10px; /* Add space between stacked items */
+                align-items: center; /* Center align items on smaller screens */
+            }
+
+            @media (max-width: 480px) {
+                gap: 5px; /* Reduce gap between items on very small screens */
+            }
+
+            .item {
+                text-align: center;
+
+                .itemTitle {
+                    font-size: 14px;
+                    color: gray;
+
+                    @media (max-width: 768px) {
+                        font-size: 12px; /* Reduce item title size for smaller screens */
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 10px; /* Further reduce item title size for very small screens */
+                    }
+                }
+
+                .itemResult {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    font-size: 14px;
+
+                    @media (max-width: 768px) {
+                        font-size: 12px; /* Reduce item result font size for smaller screens */
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 10px; /* Further reduce font size for very small screens */
+                    }
+
+                    &.positive {
+                        color: green;
+                    }
+
+                    &.negative {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 480px) {
+        padding: 8px; /* Reduce padding for very small screens */
+
+        .top {
+            .title {
+                font-size: 12px; /* Further reduce title size */
+            }
+        }
+
+        .bottom {
+            padding: 10px; /* Reduce bottom padding */
+            
+            .featuredChart {
+                width: 60px; /* Further reduce chart size */
+                height: 60px;
+            }
+
+            .amount {
+                font-size: 20px; /* Further reduce amount size */
+            }
+
+            .summary {
+                gap: 5px; /* Reduce gap between items in summary for very small screens */
+            }
+        }
+    }
+}

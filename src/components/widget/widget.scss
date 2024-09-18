@@ -1,0 +1,110 @@
+.widget {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    height: 100px;
+    transition: all 0.3s ease;
+
+    .left, .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+            font-weight: bold;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .counter {
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        .link {
+            width: max-content;
+            font-size: 12px;
+            border-bottom: 1px solid gray;
+            cursor: pointer;
+        }
+
+        .percentage {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            &.positive {
+                color: green;
+            }
+
+            &.negative {
+                color: red;
+            }
+        }
+
+        .icon {
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 5px;
+            align-self: flex-end;
+        }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack widgets vertically on small screens */
+        height: auto; /* Adjust height to fit content */
+        margin-bottom: 20px; /* Add space between widgets when stacked */
+
+        .left, .right {
+            flex-direction: row; /* Align content horizontally inside left and right */
+            justify-content: space-between;
+            align-items: center;
+
+            .title, .counter, .link, .percentage {
+                font-size: 12px; /* Reduce font size for smaller screens */
+            }
+
+            .icon {
+                font-size: 16px;
+                padding: 4px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 8px; /* Reduce padding for very small screens */
+        box-shadow: 2px 4px 8px 1px rgba(201, 201, 201, 0.37); /* Soften shadow for smaller screens */
+        
+        .left, .right {
+            .title, .counter, .link, .percentage {
+                font-size: 10px; /* Further reduce font sizes */
+            }
+
+            .icon {
+                font-size: 14px; /* Further reduce icon size */
+                padding: 3px;
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        flex-direction: row; /* Display widgets side by side on larger screens */
+    }
+}
+
+/* Widget container to handle vertical stacking on small screens */
+.widget-container {
+    display: flex;
+    flex-direction: column; /* Stack widgets vertically by default */
+
+    @media (min-width: 769px) {
+        flex-direction: row; /* Display widgets horizontally on larger screens */
+        justify-content: space-between;
+        gap: 20px; /* Add space between widgets */
+    }
+}
