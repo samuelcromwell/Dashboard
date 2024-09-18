@@ -1,6 +1,6 @@
 import Home from "./pages/home/Home";
-import List from "./pages/list/List";
 import Single from "./pages/single/Single";
+import Settings from "./pages/settings/Settings";
 import {
   BrowserRouter,
   Routes,
@@ -20,10 +20,8 @@ function App() {
           <Route path=":productId" element={<Single />} /> 
         </Route>
 
-        <Route path="reports">
-          <Route index element={<List />} />
-          <Route path=":productId" element={<Single />} /> 
-        </Route>
+        <Route path="settings" element={<Settings />}/>
+       
       </Routes>
      </BrowserRouter>
     </div>

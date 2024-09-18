@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './sidebar.scss';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MenuIcon from '@mui/icons-material/Menu';  // menu icon for the toggle button
@@ -46,10 +45,12 @@ const Sidebar = () => {
               </li>
             </Link>
             <p className="title">SERVICE</p>
-            <li>
-              <SettingsIcon className='icon' />
-              <span>Settings</span>
-            </li>
+            <Link to='/settings' style={{ textDecoration: 'none' }}>
+              <li>
+                <SettingsIcon className='icon' />
+                <span>Settings</span>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

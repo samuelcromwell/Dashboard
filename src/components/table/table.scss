@@ -1,70 +1,103 @@
 .table {
-  width: 100%; /* Ensure the table takes the full width of its container */
-
-  .cellWrapper {
+    width: 100%;
+    overflow-x: auto;  /* Allows the table to scroll horizontally */
+    display: block;
+  
+    .cellWrapper {
       display: flex;
       align-items: center;
-
+  
       .image {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          margin-right: 10px;
-          object-fit: cover;
-
-          @media (max-width: 768px) {
-              width: 28px; /* Reduce image size for smaller screens */
-              height: 28px;
-              margin-right: 8px;
-          }
-
-          @media (max-width: 480px) {
-              width: 24px; /* Further reduce image size for very small screens */
-              height: 24px;
-              margin-right: 6px;
-          }
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+  
+        @media (max-width: 768px) {
+          width: 28px;
+          height: 28px;
+          margin-right: 8px;
+        }
+  
+        @media (max-width: 480px) {
+          width: 24px;
+          height: 24px;
+          margin-right: 6px;
+        }
       }
-  }
-
-  .status {
+    }
+  
+    .status {
       padding: 5px;
       border-radius: 5px;
-      text-align: center; /* Center the status text */
-      font-size: 12px; /* Set a default font size */
-
+      text-align: center;
+      font-size: 12px;
+  
       &.Completed {
-          color: green;
-          background-color: rgba(0, 128, 0, 0.151);
+        color: green;
+        background-color: rgba(0, 128, 0, 0.151);
       }
-
+  
       &.Pending {
-          color: goldenrod;
-          background-color: rgba(189, 189, 3, 0.103);
+        color: goldenrod;
+        background-color: rgba(189, 189, 3, 0.103);
       }
-
+  
       &.Cancelled {
-          color: red;
-          background-color: rgba(189, 189, 3, 0.103);
+        color: red;
+        background-color: rgba(189, 189, 3, 0.103);
       }
-
+  
       @media (max-width: 768px) {
-          font-size: 11px; /* Reduce font size for smaller screens */
-          padding: 4px; /* Reduce padding for smaller screens */
+        font-size: 11px;
+        padding: 4px;
       }
-
+  
       @media (max-width: 480px) {
-          font-size: 10px; /* Further reduce font size for very small screens */
-          padding: 3px;
+        font-size: 10px;
+        padding: 3px;
       }
+    }
+  
+    /* Table styling for small screens */
+    table {
+      width: 100%;
+      border-spacing: 0;
+      overflow-x: auto;
+  
+      @media (max-width: 768px) {
+        font-size: 12px; /* Reduce font size for medium screens */
+      }
+  
+      @media (max-width: 480px) {
+        font-size: 11px; /* Further reduce font size for small screens */
+      }
+  
+      th, td {
+        padding: 8px;  /* Adjust padding for smaller screens */
+        text-align: left;
+  
+        @media (max-width: 768px) {
+          padding: 6px;
+        }
+  
+        @media (max-width: 480px) {
+          padding: 4px;
+        }
+      }
+    }
+  
+    /* Responsive table behavior on small screens */
+    @media (max-width: 768px) {
+      display: block;  /* Ensure block display on smaller screens */
+      overflow-x: auto;  /* Allow horizontal scroll */
+    }
+  
+    @media (max-width: 480px) {
+      display: block;
+      overflow-x: auto;
+      width: 100%;  /* Force full width for mobile */
+    }
   }
-
-  /* Add horizontal scroll if table content overflows */
-  overflow-x: auto; /* Allows horizontal scrolling for small screens */
-  display: block; /* Ensure the table can scroll horizontally */
-
-  /* Optional styling to prevent table overflow */
-  table {
-      width: 100%; /* Make sure table takes full width */
-      border-spacing: 0; /* Prevent space between table cells */
-  }
-}
+  
