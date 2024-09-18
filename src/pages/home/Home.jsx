@@ -23,6 +23,7 @@ const Home = () => {
         </div>
         <div className="listContainer">
           <div className="listTitle">
+            <h1 className="title">Recent Transactions</h1>
             <List />
           </div>
         </div>

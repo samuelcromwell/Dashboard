@@ -78,7 +78,6 @@ const List = () => {
   
   return (
     <TableContainer component={Paper} className ='table'>
-            <h1 className="title">Latest Transactions</h1>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
