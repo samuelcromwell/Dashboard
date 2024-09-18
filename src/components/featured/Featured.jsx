@@ -26,7 +26,7 @@ const Featured = () => {
     <div className='featured'>
       <div className="top">
         <div className="title">
-          Total Applications
+          Total Sales
         </div>
         <MoreVertOutlinedIcon fontSize='small'/>
       </div>
@@ -34,9 +34,8 @@ const Featured = () => {
         <div className="featuredChart">
           <CircularProgressbar value={70} text={'70%'} strokeWidth={5}/>
         </div>
-        <p className="title">Total applications made today</p>
-        <p className="amount">5</p>
-        <p className="desc">Previous day may not reflect</p>
+        <p className="title">Completed transactions</p>
+        <p className="amount">6</p>
         <div className={`summary ${isMobile ? 'mobile' : 'desktop'}`}>
           <div className="item">
             <div className="itemTitle">Target</div>

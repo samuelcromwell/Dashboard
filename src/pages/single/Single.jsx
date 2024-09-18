@@ -11,33 +11,31 @@ const Single = () => {
       <div className="singleContainer">
         <div className="top">
           <div className="left">
-            <div className="editButton">Edit</div>
-            <h1 className="title">Information</h1>
+            <h1 className="title">Projects</h1>
             <div className="item">
-            <img
-                src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                alt=""
-                className="itemImg"
-              />
+            
               <div className="details">
-                <h1 className="itemTitle">Jane Doe</h1>
+                <h1 className="itemTitle">EcoTracking</h1>
                 <div className="detailItem">
-                  <span className="itemKey">Email:</span>
-                  <span className="itemValue">janedoe@gmail.com</span>
+                  <span className="itemKey">Status:</span>
+                  <span className="itemValue">ongoing</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Phone:</span>
-                  <span className="itemValue">+1 2345 67 89</span>
+                  <span className="itemKey">Start Date:</span>
+                  <span className="itemValue">15th August 2024</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Address:</span>
-                  <span className="itemValue">
-                    Elton St. 234 Garden Yd. NewYork
+                  <span className="itemKey">Estimated Completion:</span>
+                  <span className="itemValue">30th November 2024
                   </span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Country:</span>
-                  <span className="itemValue">USA</span>
+                  <span className="itemKey">Team Members:</span>
+                  <span className="itemValue">8</span>
+                </div>
+                <div className="detailItem">
+                  <span className="itemKey">Objective:</span>
+                  <span className="itemValue">To develop a comprehensive platform for tracking carbon emissions across industries using AI and data analytics</span>
                 </div>
               </div>
             </div>

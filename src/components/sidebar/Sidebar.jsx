@@ -39,12 +39,6 @@ const Sidebar = () => {
               </li>
             </Link>
             <p className="title">LISTS</p>
-            <Link to='/jobs/:userId' style={{ textDecoration: 'none' }}>
-              <li>
-                <QrCodeScannerIcon className='icon' />
-                <span>Jobs</span>
-              </li>
-            </Link>
             <Link to='/reports' style={{ textDecoration: 'none' }}>
               <li>
                 <CreditCardIcon className='icon' />

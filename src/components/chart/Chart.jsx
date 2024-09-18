@@ -3,12 +3,12 @@ import './chart.scss'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
-    { name: 'August', Total: 12},
-    { name: 'September', Total: 21},
-    { name: 'October', Total: 8},
-    { name: 'November', Total: 16},
-    { name: 'December', Total: 9},
-    { name: 'January', Total: 17}
+    { name: 'April', Total: 34000},
+    { name: 'May', Total: 21000},
+    { name: 'June', Total: 64000},
+    { name: 'July', Total: 58000},
+    { name: 'August', Total: 60000},
+    { name: 'September', Total: 78000}
 ];
 
 const Chart = ({aspect, title}) => {
