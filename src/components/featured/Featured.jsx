@@ -12,10 +12,16 @@ const Featured = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
+  
+      // Disable ESLint warning for unused variable
+      // eslint-disable-next-line no-unused-vars
+      const triggerReflow = document.body.offsetHeight; // Trigger the reflow
     };
-
+  
+    handleResize(); // Ensure it runs on mount
+  
     window.addEventListener('resize', handleResize);
-
+  
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -23,7 +29,7 @@ const Featured = () => {
   }, []);
 
   return (
-    <div className='featured'>
+    <div className={`featured ${isMobile ? 'mobile' : 'desktop'}`}>
       <div className="top">
         <div className="title">
           Total Sales

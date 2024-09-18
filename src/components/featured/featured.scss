@@ -4,11 +4,15 @@
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     padding: 10px;
     transition: all 0.3s ease;
-    margin: 0 auto; /* Center the featured component */
+    margin: 0 auto;
 
-    @media (max-width: 768px) {
-        width: 100%; /* Ensure it takes up full width */
-        padding: 10px; /* Add some padding for mobile */
+    &.mobile {
+        width: 100%;
+        padding: 10px;
+    }
+
+    &.desktop {
+        /* Add any desktop-specific styling here */
     }
 
     .top {
@@ -22,7 +26,7 @@
             font-weight: 500;
 
             @media (max-width: 768px) {
-                font-size: 14px; /* Reduce title size for smaller screens */
+                font-size: 14px; 
             }
         }
     }
@@ -34,11 +38,11 @@
         align-items: center;
         justify-content: center;
         gap: 15px;
-        width: 100%; /* Make sure it takes full width on small screens */
+        width: 100%; 
 
         @media (max-width: 768px) {
-            padding: 15px; /* Reduce padding for smaller screens */
-            gap: 10px; /* Reduce gap between elements on smaller screens */
+            padding: 15px;
+            gap: 10px;
         }
 
         .featuredChart {
@@ -46,12 +50,12 @@
             height: 100px;
 
             @media (max-width: 768px) {
-                width: 80px; /* Reduce chart size for smaller screens */
+                width: 80px;
                 height: 80px;
             }
 
             @media (max-width: 480px) {
-                width: 60px; /* Further reduce chart size for very small screens */
+                width: 60px;
                 height: 60px;
             }
         }
@@ -62,7 +66,7 @@
             font-size: 14px;
 
             @media (max-width: 768px) {
-                font-size: 12px; /* Reduce title size for smaller screens */
+                font-size: 12px;
             }
         }
 
@@ -70,22 +74,11 @@
             font-size: 30px;
 
             @media (max-width: 768px) {
-                font-size: 24px; /* Reduce amount size for smaller screens */
+                font-size: 24px;
             }
 
             @media (max-width: 480px) {
-                font-size: 20px; /* Further reduce amount size for very small screens */
-            }
-        }
-
-        .desc {
-            font-weight: 300;
-            font-size: 12px;
-            color: gray;
-            text-align: center;
-
-            @media (max-width: 768px) {
-                font-size: 11px; /* Reduce description size for smaller screens */
+                font-size: 20px;
             }
         }
 
@@ -93,17 +86,17 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-around; /* Ensure even spacing between items */
-            gap: 20px; /* Add some spacing between sections */
+            justify-content: space-around;
+            gap: 20px;
 
             @media (max-width: 768px) {
-                flex-direction: column; /* Stack summary items vertically on smaller screens */
-                gap: 10px; /* Add space between stacked items */
-                align-items: center; /* Center align items on smaller screens */
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
             }
 
             @media (max-width: 480px) {
-                gap: 5px; /* Reduce gap between items on very small screens */
+                gap: 5px;
             }
 
             .item {
@@ -114,11 +107,11 @@
                     color: gray;
 
                     @media (max-width: 768px) {
-                        font-size: 12px; /* Reduce item title size for smaller screens */
+                        font-size: 12px;
                     }
 
                     @media (max-width: 480px) {
-                        font-size: 10px; /* Further reduce item title size for very small screens */
+                        font-size: 10px;
                     }
                 }
 
@@ -129,11 +122,11 @@
                     font-size: 14px;
 
                     @media (max-width: 768px) {
-                        font-size: 12px; /* Reduce item result font size for smaller screens */
+                        font-size: 12px;
                     }
 
                     @media (max-width: 480px) {
-                        font-size: 10px; /* Further reduce font size for very small screens */
+                        font-size: 10px;
                     }
 
                     &.positive {
@@ -144,34 +137,6 @@
                         color: red;
                     }
                 }
-            }
-        }
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 480px) {
-        padding: 8px; /* Reduce padding for very small screens */
-
-        .top {
-            .title {
-                font-size: 12px; /* Further reduce title size */
-            }
-        }
-
-        .bottom {
-            padding: 10px; /* Reduce bottom padding */
-            
-            .featuredChart {
-                width: 60px; /* Further reduce chart size */
-                height: 60px;
-            }
-
-            .amount {
-                font-size: 20px; /* Further reduce amount size */
-            }
-
-            .summary {
-                gap: 5px; /* Reduce gap between items in summary for very small screens */
             }
         }
     }
