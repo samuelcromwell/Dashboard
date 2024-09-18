@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
 import './settings.scss';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Settings = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [showSidebar, setShowSidebar] = useState(false); // State to toggle sidebar
+
+  // Add a resize listener to detect window size changes
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Function to toggle sidebar visibility in mobile view
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
+
   return (
     <div className="settings">
-      <Sidebar /> {/* Sidebar component */}
-      <div className="settingsContainer">
-        
+      {isMobile && (
+        <button className="sidebar-toggle-btn" onClick={toggleSidebar}>
+          <MenuIcon />
+        </button>
+      )}
+
+      {(!isMobile || showSidebar) && <Sidebar />} {/* Hide Sidebar in mobile view and toggle */}
+      
+      <div className={`settingsContainer ${showSidebar && isMobile ? 'shifted' : ''}`}>
         <div className="settingsFormContainer">
           <h1 className="settingsTitle">Settings</h1>
 

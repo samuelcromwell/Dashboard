@@ -6,13 +6,10 @@
     transition: all 0.3s ease;
     margin: 0 auto;
 
+    /* Mobile-specific adjustments */
     &.mobile {
         width: 100%;
         padding: 10px;
-    }
-
-    &.desktop {
-        /* Add any desktop-specific styling here */
     }
 
     .top {

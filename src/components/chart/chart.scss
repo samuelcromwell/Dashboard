@@ -1,5 +1,5 @@
 .chart {
-    flex: 4;
+    flex: 2;
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     padding: 10px;
@@ -14,6 +14,11 @@
             font-size: 14px; /* Reduce title size on smaller screens */
             margin-bottom: 10px; /* Reduce margin for smaller screens */
         }
+
+        @media (max-width: 480px) {
+            font-size: 12px; /* Further reduce title size for smaller screens */
+            margin-bottom: 8px;
+        }
     }
 
     .chartGrid {
@@ -22,7 +27,7 @@
 
     /* Responsive Styles */
     @media (max-width: 768px) {
-        flex: 1; /* Allow the chart to take full width on small screens */
+        flex: 1; /* Ensure the chart takes full width on small screens */
         padding: 8px; /* Reduce padding on smaller screens */
         margin-bottom: 20px; /* Add margin between stacked elements */
     }
@@ -30,10 +35,19 @@
     @media (max-width: 480px) {
         padding: 6px; /* Further reduce padding for very small screens */
         margin-bottom: 15px;
+    }
+}
 
-        .title {
-            font-size: 12px; /* Smaller title size for very small screens */
-            margin-bottom: 8px;
-        }
+/* Add specific styles for the chart component */
+.chartWrapper {
+    width: 100%; /* Ensure chart takes full width of container */
+    height: auto; /* Make sure height adjusts with width */
+
+    @media (max-width: 768px) {
+        height: auto; /* Allow height to adapt on small screens */
+    }
+
+    @media (max-width: 480px) {
+        height: auto; /* Maintain adaptive height on smaller devices */
     }
 }
